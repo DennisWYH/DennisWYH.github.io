@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Yunhai&#39;s Blog">
 <meta property="og:description" content="Prerequisite: Python library pandas  Python library sklearn (scikit - learn) import pandas as pd from sklearn.tree import DecisionTreeRegressor from sklearn.metrics import mean_absolute_error as mae">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-06-12T03:11:05.817Z">
+<meta property="og:updated_time" content="2018-06-12T03:27:59.454Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python_Decistion_Tree">
 <meta name="twitter:description" content="Prerequisite: Python library pandas  Python library sklearn (scikit - learn) import pandas as pd from sklearn.tree import DecisionTreeRegressor from sklearn.metrics import mean_absolute_error as mae">
@@ -266,7 +266,7 @@
           
             <span class="post-letters-count">
               &nbsp; | &nbsp;
-              <span>85 parole</span>
+              <span>237 parole</span>
               &nbsp; | &nbsp;
               <span>1 mins</span>
             </span>
@@ -337,7 +337,19 @@ from sklearn.metrics import mean_absolute_error as mae
 </li>
 </ul>
 <h1 id="Last-evaluate-the-result-with-mean-abusolute-error"><a href="#Last-evaluate-the-result-with-mean-abusolute-error" class="headerlink" title="Last, evaluate the result with mean_abusolute_error"></a>Last, evaluate the result with mean_abusolute_error</h1><pre><code>mae(actualData, prediction)
-</code></pre>
+</code></pre><h1 id="How-to-improve-the-result"><a href="#How-to-improve-the-result" class="headerlink" title="How to improve the result"></a>How to improve the result</h1><ul>
+<li>By knowing better the aruguments of the model to improve the perfomance of this single model<blockquote>
+<p>Decision trees leave you with a difficult decision. A deep tree with lots of leaves will overfit<br>because each prediction is coming from historical data from only the few houses at its leaf. But a<br>shallow tree with few leaves will perform poorly because it fails to capture as many distinctions in<br>the raw data.  </p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li>By applying many models and get the aveage result, which is usually better a result.<blockquote>
+<p>The random forest uses many trees, and it makes a prediction by averaging the predictions of each<br>component tree. It generally has much better predictive accuracy than a single decision tree and it works<br>well with default parameters. If you keep modeling, you can learn more models with even better<br>performance, but many of those are sensitive to getting the right parameters.</p>
+</blockquote>
+</li>
+</ul>
+
       
     </div>
     
@@ -502,7 +514,7 @@ from sklearn.metrics import mean_absolute_error as mae
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Prerequisite"><span class="nav-number">1.</span> <span class="nav-text">Prerequisite:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Create-Model"><span class="nav-number">2.</span> <span class="nav-text">Create Model</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fit-the-model-with-data"><span class="nav-number">3.</span> <span class="nav-text">fit the model with data</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#so-that-the-model-can-find-out-“knowledge”"><span class="nav-number">4.</span> <span class="nav-text">so that the model can find out “knowledge”</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#the-model-can-now-make-predictions-with-data-given"><span class="nav-number">5.</span> <span class="nav-text">the model can now make predictions with data given</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Last-evaluate-the-result-with-mean-abusolute-error"><span class="nav-number">6.</span> <span class="nav-text">Last, evaluate the result with mean_abusolute_error</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Prerequisite"><span class="nav-number">1.</span> <span class="nav-text">Prerequisite:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Create-Model"><span class="nav-number">2.</span> <span class="nav-text">Create Model</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fit-the-model-with-data"><span class="nav-number">3.</span> <span class="nav-text">fit the model with data</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#so-that-the-model-can-find-out-“knowledge”"><span class="nav-number">4.</span> <span class="nav-text">so that the model can find out “knowledge”</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#the-model-can-now-make-predictions-with-data-given"><span class="nav-number">5.</span> <span class="nav-text">the model can now make predictions with data given</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Last-evaluate-the-result-with-mean-abusolute-error"><span class="nav-number">6.</span> <span class="nav-text">Last, evaluate the result with mean_abusolute_error</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#How-to-improve-the-result"><span class="nav-number">7.</span> <span class="nav-text">How to improve the result</span></a></li></ol></div>
             
 
           </div>
