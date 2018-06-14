@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Yunhai&#39;s Blog">
 <meta property="og:description" content="Aim of this blog A full log of how to solve the kaggle introduction competition - titanic project. A reference case of classification problem using machine leanring algorithm  setting up environmentUs">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-06-14T06:10:43.836Z">
+<meta property="og:updated_time" content="2018-06-14T08:06:20.731Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="kaggle_project_titanic">
 <meta name="twitter:description" content="Aim of this blog A full log of how to solve the kaggle introduction competition - titanic project. A reference case of classification problem using machine leanring algorithm  setting up environmentUs">
@@ -267,7 +267,7 @@
           
             <span class="post-letters-count">
               &nbsp; | &nbsp;
-              <span>363 parole</span>
+              <span>381 parole</span>
               &nbsp; | &nbsp;
               <span>2 mins</span>
             </span>
@@ -416,6 +416,12 @@ Embarked        object
 dtype: object
 
 # what is object type? 
+</code></pre><h2 id="Explore-data-with-visualization"><a href="#Explore-data-with-visualization" class="headerlink" title="Explore data with visualization"></a>Explore data with visualization</h2><pre><code>sex_pivot = train_data.pivot_table(index = &quot;Sex&quot;, values = &quot;Survived&quot;)
+sex_pivot.plot.bar()
+plt.show()
+
+
+![](/Figure_1.png)
 </code></pre><h2 id="Build-model"><a href="#Build-model" class="headerlink" title="Build model"></a>Build model</h2><pre><code># Define model 
 from sklearn.tree import DecisionTreeRegressor
 model = DecisionTreeRegressor()
@@ -598,7 +604,7 @@ model.fit(x,y)
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Aim-of-this-blog"><span class="nav-number">1.</span> <span class="nav-text">Aim of this blog</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#setting-up-environment"><span class="nav-number">2.</span> <span class="nav-text">setting up environment</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Use-conda-as-enviroment-managemenet-tool"><span class="nav-number">2.1.</span> <span class="nav-text">Use conda as enviroment managemenet tool</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Read-data-and-interact"><span class="nav-number">2.2.</span> <span class="nav-text">Read data and interact</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-cleasing"><span class="nav-number">2.3.</span> <span class="nav-text">Data cleasing</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#find-out-which-columns-are-predictors"><span class="nav-number">2.3.1.</span> <span class="nav-text">find out which columns are predictors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-out-which-column-is-the-target"><span class="nav-number">2.3.2.</span> <span class="nav-text">find out which column is the target</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#check-if-there-is-any-empty-values"><span class="nav-number">2.3.3.</span> <span class="nav-text">check if there is any empty values</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#check-if-there-is-non-standard-data-type"><span class="nav-number">2.3.4.</span> <span class="nav-text">check if there is non standard data type.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Build-model"><span class="nav-number">2.4.</span> <span class="nav-text">Build model</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Aim-of-this-blog"><span class="nav-number">1.</span> <span class="nav-text">Aim of this blog</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#setting-up-environment"><span class="nav-number">2.</span> <span class="nav-text">setting up environment</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Use-conda-as-enviroment-managemenet-tool"><span class="nav-number">2.1.</span> <span class="nav-text">Use conda as enviroment managemenet tool</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Read-data-and-interact"><span class="nav-number">2.2.</span> <span class="nav-text">Read data and interact</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-cleasing"><span class="nav-number">2.3.</span> <span class="nav-text">Data cleasing</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#find-out-which-columns-are-predictors"><span class="nav-number">2.3.1.</span> <span class="nav-text">find out which columns are predictors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-out-which-column-is-the-target"><span class="nav-number">2.3.2.</span> <span class="nav-text">find out which column is the target</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#check-if-there-is-any-empty-values"><span class="nav-number">2.3.3.</span> <span class="nav-text">check if there is any empty values</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#check-if-there-is-non-standard-data-type"><span class="nav-number">2.3.4.</span> <span class="nav-text">check if there is non standard data type.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Explore-data-with-visualization"><span class="nav-number">2.4.</span> <span class="nav-text">Explore data with visualization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Build-model"><span class="nav-number">2.5.</span> <span class="nav-text">Build model</span></a></li></ol></li></ol></div>
             
 
           </div>
