@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Aim of this blog A full log of how to solve the kaggle introduction competition - titanic project. A reference case of classification problem using machine leanring algorithmsetting up environment  Us">
+<meta name="description" content="Aim of this blog A full log of how to solve the kaggle introduction competition - titanic project. A reference case of classification problem using machine leanring algorithm  setting up environmentUs">
 <meta name="keywords" content="data analysis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="kaggle_project_titanic">
 <meta property="og:url" content="https://github.com/DennisWYH/DennisWYH.github.io/2018/06/13/kaggle-project-titanic/index.html">
 <meta property="og:site_name" content="Yunhai&#39;s Blog">
-<meta property="og:description" content="Aim of this blog A full log of how to solve the kaggle introduction competition - titanic project. A reference case of classification problem using machine leanring algorithmsetting up environment  Us">
+<meta property="og:description" content="Aim of this blog A full log of how to solve the kaggle introduction competition - titanic project. A reference case of classification problem using machine leanring algorithm  setting up environmentUs">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-06-13T10:02:47.566Z">
+<meta property="og:updated_time" content="2018-06-14T06:10:43.836Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="kaggle_project_titanic">
-<meta name="twitter:description" content="Aim of this blog A full log of how to solve the kaggle introduction competition - titanic project. A reference case of classification problem using machine leanring algorithmsetting up environment  Us">
+<meta name="twitter:description" content="Aim of this blog A full log of how to solve the kaggle introduction competition - titanic project. A reference case of classification problem using machine leanring algorithm  setting up environmentUs">
 
 
 
@@ -267,9 +267,9 @@
           
             <span class="post-letters-count">
               &nbsp; | &nbsp;
-              <span>459 parole</span>
+              <span>363 parole</span>
               &nbsp; | &nbsp;
-              <span>3 mins</span>
+              <span>2 mins</span>
             </span>
           
           <span class="post-time">
@@ -353,16 +353,16 @@
       
         <h1 id="Aim-of-this-blog"><a href="#Aim-of-this-blog" class="headerlink" title="Aim of this blog"></a>Aim of this blog</h1><ul>
 <li>A full log of how to solve the kaggle introduction competition - titanic project.</li>
-<li>A reference case of classification problem using machine leanring algorithm<h1 id="setting-up-environment"><a href="#setting-up-environment" class="headerlink" title="setting up environment"></a>setting up environment</h1></li>
+<li>A reference case of classification problem using machine leanring algorithm</li>
 </ul>
-<h2 id="Use-conda-as-enviroment-managemenet-tool"><a href="#Use-conda-as-enviroment-managemenet-tool" class="headerlink" title="Use conda as enviroment managemenet tool"></a>Use conda as enviroment managemenet tool</h2><pre><code>conda create --name titanic python=3.6
+<h1 id="setting-up-environment"><a href="#setting-up-environment" class="headerlink" title="setting up environment"></a>setting up environment</h1><h2 id="Use-conda-as-enviroment-managemenet-tool"><a href="#Use-conda-as-enviroment-managemenet-tool" class="headerlink" title="Use conda as enviroment managemenet tool"></a>Use conda as enviroment managemenet tool</h2><pre><code>conda create --name titanic python=3.6
 conda info --envs
 conda activate titanic
 conda install pandas
 conda install sciki-learn
 
 # Now you should be able to see (titanic) in the beginning of your command line. 
-</code></pre><h2 id="Read-data-and-interac"><a href="#Read-data-and-interac" class="headerlink" title="Read data and interac"></a>Read data and interac</h2><pre><code>&gt;&gt;&gt; import pandas as pd
+</code></pre><h2 id="Read-data-and-interact"><a href="#Read-data-and-interact" class="headerlink" title="Read data and interact"></a>Read data and interact</h2><pre><code>&gt;&gt;&gt; import pandas as pd
 &gt;&gt;&gt; url = &apos;train.csv&apos;
 &gt;&gt;&gt; train_date = pd.read_csv(url)
 &gt;&gt;&gt; train_data.describe()
@@ -383,43 +383,47 @@ Index([&apos;PassengerId&apos;, &apos;Survived&apos;, &apos;Pclass&apos;, &apos;
 &apos;Parch&apos;, &apos;Ticket&apos;, &apos;Fare&apos;, &apos;Cabin&apos;, &apos;Embarked&apos;],
 dtype=&apos;object&apos;)
 </code></pre><h2 id="Data-cleasing"><a href="#Data-cleasing" class="headerlink" title="Data cleasing"></a>Data cleasing</h2><h3 id="find-out-which-columns-are-predictors"><a href="#find-out-which-columns-are-predictors" class="headerlink" title="find out which columns are predictors"></a>find out which columns are predictors</h3><pre><code>columns_list = [&apos;PassengerId&apos;,&apos;Pclass&apos;, &apos;Name&apos;, &apos;Sex&apos;, &apos;Age&apos;, &apos;SibSp&apos;,&apos;Parch&apos;, &apos;Ticket&apos;, &apos;Fare&apos;, &apos;Cabin&apos;, &apos;Embarked&apos;]
-train_date[columns_list]
-</code></pre><h3 id="find-out-which-column-is-the-target"><a href="#find-out-which-column-is-the-target" class="headerlink" title="find out which column is the target"></a>find out which column is the target</h3><pre><code>train_date.Survived
-</code></pre><h3 id="check-if-there-is-any-empty-values"><a href="#check-if-there-is-any-empty-values" class="headerlink" title="check if there is any empty values"></a>check if there is any empty values</h3><h2 id="Build-model"><a href="#Build-model" class="headerlink" title="Build model"></a>Build model</h2><pre><code># Define model 
+train_data[columns_list]
+</code></pre><h3 id="find-out-which-column-is-the-target"><a href="#find-out-which-column-is-the-target" class="headerlink" title="find out which column is the target"></a>find out which column is the target</h3><pre><code>train_data.Survived
+</code></pre><h3 id="check-if-there-is-any-empty-values"><a href="#check-if-there-is-any-empty-values" class="headerlink" title="check if there is any empty values"></a>check if there is any empty values</h3><ul>
+<li><p>There are many naN values in the columns</p>
+<pre><code>&gt;&gt;&gt; cols_with_missing = [col for col in train_data.columns if train_data[col].isnull().any()]
+&gt;&gt;&gt; cols_with_missing
+[&apos;Age&apos;, &apos;Cabin&apos;, &apos;Embarked&apos;]
+
+# Age has only a few empties - to be imputed
+# Cabin is almost all empty - to be dropped
+# Embared is actuallly full with data? - to check where
+# Tickets have a non uniform format - STON/O2. 3101282 - to be dropped
+</code></pre></li>
+</ul>
+<pre><code>train_data = train_data.drop([&apos;Ticket&apos;,&apos;Cabin&apos;], axis = 1);
+train_data = train_data.dropna()
+</code></pre><h3 id="check-if-there-is-non-standard-data-type"><a href="#check-if-there-is-non-standard-data-type" class="headerlink" title="check if there is non standard data type."></a>check if there is non standard data type.</h3><pre><code>&gt;&gt;&gt; train_data.dtypes
+
+PassengerId      int64
+Survived         int64
+Pclass           int64
+Name            object
+Sex             object
+Age            float64
+SibSp            int64
+Parch            int64
+Ticket          object
+Fare           float64
+Cabin           object
+Embarked        object
+dtype: object
+
+# what is object type? 
+</code></pre><h2 id="Build-model"><a href="#Build-model" class="headerlink" title="Build model"></a>Build model</h2><pre><code># Define model 
 from sklearn.tree import DecisionTreeRegressor
 model = DecisionTreeRegressor()
 
 # fit the model
 model.fit(x,y)
+</code></pre><p><a href="http://nbviewer.jupyter.org/github/agconti/kaggle-titanic/blob/master/Titanic.ipynb" target="_blank" rel="noopener">a blog for reference on kaggle titanic</a><br><a href="https://bitbucket.org/hrojas/learn-pandas" target="_blank" rel="noopener">website to learn pandas</a></p>
 
-&gt;&gt;&gt; model.fit(x,y)
-Traceback (most recent call last):
-File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-File &quot;//anaconda/envs/titanic/lib/python3.6/site-packages/sklearn/tree/tree.py&quot;, line 1124, in fit
-X_idx_sorted=X_idx_sorted)
-File &quot;//anaconda/envs/titanic/lib/python3.6/site-packages/sklearn/tree/tree.py&quot;, line 116, in fit
-X = check_array(X, dtype=DTYPE, accept_sparse=&quot;csc&quot;)
-File &quot;//anaconda/envs/titanic/lib/python3.6/site-packages/sklearn/utils/validation.py&quot;, line 433, in check_array
-array = np.array(array, dtype=dtype, order=order, copy=copy)
-ValueError: could not convert string to float: &apos;Q&apos;
-
-# Debug 1
-# could be that there is empty value in some of the columns
-# test: try use some smaller set of columns first which all have values.
-
-    &gt;&gt;&gt; columns_for_z = [&apos;PassengerId&apos;,&apos;Pclass&apos;,&apos;Sex&apos;]
-    &gt;&gt;&gt; z = train_data[columns_for_z]
-    &gt;&gt;&gt; model.fit(z,y)
-    Traceback (most recent call last):
-    File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-    File &quot;//anaconda/envs/titanic/lib/python3.6/site-packages/sklearn/tree/tree.py&quot;, line 1124, in fit
-    X_idx_sorted=X_idx_sorted)
-    File &quot;//anaconda/envs/titanic/lib/python3.6/site-packages/sklearn/tree/tree.py&quot;, line 116, in fit
-    X = check_array(X, dtype=DTYPE, accept_sparse=&quot;csc&quot;)
-    File &quot;//anaconda/envs/titanic/lib/python3.6/site-packages/sklearn/utils/validation.py&quot;, line 433, in check_array
-    array = np.array(array, dtype=dtype, order=order, copy=copy)
-    ValueError: could not convert string to float: &apos;male&apos;
-</code></pre>
       
     </div>
     
@@ -594,7 +598,7 @@ ValueError: could not convert string to float: &apos;Q&apos;
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Aim-of-this-blog"><span class="nav-number">1.</span> <span class="nav-text">Aim of this blog</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#setting-up-environment"><span class="nav-number">2.</span> <span class="nav-text">setting up environment</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Use-conda-as-enviroment-managemenet-tool"><span class="nav-number">2.1.</span> <span class="nav-text">Use conda as enviroment managemenet tool</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Read-data-and-interac"><span class="nav-number">2.2.</span> <span class="nav-text">Read data and interac</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-cleasing"><span class="nav-number">2.3.</span> <span class="nav-text">Data cleasing</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#find-out-which-columns-are-predictors"><span class="nav-number">2.3.1.</span> <span class="nav-text">find out which columns are predictors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-out-which-column-is-the-target"><span class="nav-number">2.3.2.</span> <span class="nav-text">find out which column is the target</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#check-if-there-is-any-empty-values"><span class="nav-number">2.3.3.</span> <span class="nav-text">check if there is any empty values</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Build-model"><span class="nav-number">2.4.</span> <span class="nav-text">Build model</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Aim-of-this-blog"><span class="nav-number">1.</span> <span class="nav-text">Aim of this blog</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#setting-up-environment"><span class="nav-number">2.</span> <span class="nav-text">setting up environment</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Use-conda-as-enviroment-managemenet-tool"><span class="nav-number">2.1.</span> <span class="nav-text">Use conda as enviroment managemenet tool</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Read-data-and-interact"><span class="nav-number">2.2.</span> <span class="nav-text">Read data and interact</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-cleasing"><span class="nav-number">2.3.</span> <span class="nav-text">Data cleasing</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#find-out-which-columns-are-predictors"><span class="nav-number">2.3.1.</span> <span class="nav-text">find out which columns are predictors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-out-which-column-is-the-target"><span class="nav-number">2.3.2.</span> <span class="nav-text">find out which column is the target</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#check-if-there-is-any-empty-values"><span class="nav-number">2.3.3.</span> <span class="nav-text">check if there is any empty values</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#check-if-there-is-non-standard-data-type"><span class="nav-number">2.3.4.</span> <span class="nav-text">check if there is non standard data type.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Build-model"><span class="nav-number">2.4.</span> <span class="nav-text">Build model</span></a></li></ol></li></ol></div>
             
 
           </div>
