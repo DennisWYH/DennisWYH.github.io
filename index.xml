@@ -5,17 +5,7 @@
     <link>https://denniswyh.github.io/</link>
     <description>Recent content on Yunhai Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 04 Jun 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://denniswyh.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>An Example Post</title>
-      <link>https://denniswyh.github.io/post/first/</link>
-      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://denniswyh.github.io/post/first/</guid>
-      <description>###hdfadf</description>
-    </item>
-    
+    <language>en-us</language><atom:link href="https://denniswyh.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>https://denniswyh.github.io/search/placeholder/</link>
